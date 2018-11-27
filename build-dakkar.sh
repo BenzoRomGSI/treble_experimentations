@@ -35,6 +35,7 @@ ROM types:
   aosp80
   aosp81
   aosp90
+  benzo
   carbon
   e-0.2
   lineage151
@@ -92,6 +93,13 @@ function get_rom_type() {
                 localManifestBranch="android-9.0"
                 treble_generate=""
                 extra_make_options=""
+                ;;
+            benzo)
+                mainrepo="https://github.com/BenzoRom/manifest.git"
+                mainbranch="ninezero"
+                localManifestBranch="android-9.0"
+                treble_generate="benzo"
+                extra_make_options="WITHOUT_CHECK_API=true"
                 ;;
             carbon)
                 mainrepo="https://github.com/CarbonROM/android.git"
